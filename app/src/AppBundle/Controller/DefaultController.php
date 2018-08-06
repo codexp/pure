@@ -18,14 +18,4 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ));
     }
-
-    /**
-     * action-method for route create
-     * @Route("/create", name="createpage")
-     */
-    public function createAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('<h1>I am a Create-Action</h1>');
-    }
 }
