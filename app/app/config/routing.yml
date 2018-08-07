@@ -1,7 +1,7 @@
 lexicon:
     resource: "@LexiconBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /lexicon/
 
 app:
     resource: '@AppBundle/Controller/'
