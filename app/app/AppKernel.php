@@ -16,6 +16,7 @@ class AppKernel extends Kernel
             new Propel\Bundle\PropelBundle\PropelBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
+            new LexiconBundle\LexiconBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
