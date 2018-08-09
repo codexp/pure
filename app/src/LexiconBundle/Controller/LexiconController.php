@@ -32,4 +32,16 @@ class LexiconController extends Controller
             'entry' => $entry,
         ));
     }
+
+    /**
+     * @Route("/hot", name="lexicon_hot")
+     */
+    public function hotAction()
+    {
+        $entries = ['WIP', 'foo', 'bar', 'baz'];
+
+        return $this->render('LexiconBundle:lexicon:hot.html.twig', array(
+            'entries' => $entries,
+        ));
+    }
 }

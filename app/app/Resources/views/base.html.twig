@@ -9,6 +9,18 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        {% block sidebar %}
+            <div id="sidebar">
+                <div class="wrapper">
+                    <div class="container">
+                        <h3>Sidebar</h3>
+                        {{ render(controller(
+                            'LexiconBundle:Lexicon:hot'
+                        )) }}
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="{{ asset('js/main.js') }}"></script>
