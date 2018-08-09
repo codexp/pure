@@ -56,3 +56,41 @@
         </div>
     </div>
 {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+<style>
+
+    #welcome, #status {
+        margin-bottom: 2em;
+    }
+
+    #welcome h1 span {
+        display: block;
+        font-size: 75%;
+    }
+
+    #icon-status, #icon-book {
+        float: left;
+        height: 64px;
+        margin-right: 1em;
+        margin-top: -4px;
+        width: 64px;
+    }
+
+    #icon-book {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        #icon-book {
+            display: inline-block;
+        }
+
+        #status a, #next a {
+            display: block;
+        }
+    }
+</style>
+{% endblock %}
