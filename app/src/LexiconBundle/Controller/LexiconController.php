@@ -22,8 +22,14 @@ class LexiconController extends Controller
      */
     public function showAction($slug)
     {
+        $entry = trim($slug);
+
+        if (!$entry) {
+            throw $this->createNotFoundException('Lexicon entry does not exist');
+        }
+
         return $this->render('LexiconBundle:lexicon:show.html.twig', array(
-            'entry' => $slug,
+            'entry' => $entry,
         ));
     }
 }
