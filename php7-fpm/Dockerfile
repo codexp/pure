@@ -36,6 +36,8 @@ RUN echo "memory_limit=2G" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.in
 
 
 RUN echo 'alias sf="php app/console"' >> ~/.bashrc
-RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
+RUN echo 'alias la="ls -a"' >> ~/.bashrc
+RUN echo 'alias ll="ls -la"' >> ~/.bashrc
+RUN echo 'PATH=$PATH:/var/www/symfony/bin' >> ~/.bashrc
 
 WORKDIR /var/www/symfony
