@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="default" namespace="App\LexiconBundle\Model" defaultIdMethod="native"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="../../../../vendor/propel/propel/resources/dtd/database.dtd">
+
+    <table name="lexicon">
+        <column name="id" type="INTEGER" required="true" primaryKey="true" autoIncrement="true" />
+        <column name="entry" type="VARCHAR" primaryString="true" size="100" />
+        <column name="description" type="LONGVARCHAR" />
+    </table>
+
+</database>
