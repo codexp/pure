@@ -2,6 +2,7 @@
 
 namespace LexiconBundle\Controller;
 
+use LexiconBundle\Model\LexiconQuery;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -12,8 +13,11 @@ class LexiconController extends Controller
      */
     public function listAction($page = 1)
     {
+        $lexicon = new LexiconQuery();
+
         return $this->render('LexiconBundle:lexicon:list.html.twig', array(
             'page' => (int)$page,
+            'items' => $lexicon->find(),
         ));
     }
 

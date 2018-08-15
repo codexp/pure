@@ -5,6 +5,10 @@
     <div class="container">
         <h1>Lexicon</h1>
         <h2>overview</h2>
+
+        {% for item in items %}
+            <li>{{ item.entry }}: {{ item.description }}</li>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
